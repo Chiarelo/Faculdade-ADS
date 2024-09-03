@@ -1,6 +1,8 @@
-package br.edu.fatecfranca.exe01;
+package br.edu.fatecfranca.Teste;
 
-public class Teste {
+import br.edu.fatecfranca.exe02.Aluno;
+
+public class TesteAluno {
     public static void main(String[] args) {
         // Criar um aluno usando o construtor com parâmetros
         Aluno aluno1 = new Aluno(123456, "Maria Oliveira", 21, 8.5f, 7.5f);

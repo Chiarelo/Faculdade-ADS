@@ -1,8 +1,8 @@
-package br.edu.fatecfranca.exe00;
+package br.edu.fatecfranca.Teste;
 
 import br.edu.fatecfranca.exe00.*;
-public class Main {
-    public Main() {
+public class TesteCompra {
+    public TesteCompra() {
     }
 
     public static void main(String[] args) {

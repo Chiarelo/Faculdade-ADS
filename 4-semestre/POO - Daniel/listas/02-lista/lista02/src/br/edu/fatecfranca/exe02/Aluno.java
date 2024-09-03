@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.exe01;
+package br.edu.fatecfranca.exe02;
 
 public class Aluno {
     private int numeroAluno;

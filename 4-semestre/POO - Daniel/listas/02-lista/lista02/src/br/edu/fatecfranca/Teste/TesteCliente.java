@@ -1,6 +1,8 @@
-package br.edu.fatecfranca.exe00T;
+package br.edu.fatecfranca.Teste;
 
-public class Teste {
+import br.edu.fatecfranca.exe01.Cliente;
+
+public class TesteCliente {
     public static void main(String[] args) {
         // Criar um cliente usando o construtor com parâmetros
         Cliente fulano = new Cliente("12345678", "1234-5", "Fulano da Silva", 1000.0f);

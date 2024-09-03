@@ -1,4 +1,4 @@
-package br.edu.fatecfranca.exe00T;
+package br.edu.fatecfranca.exe01;
 
 public class Cliente {
     private String numeroConta;
