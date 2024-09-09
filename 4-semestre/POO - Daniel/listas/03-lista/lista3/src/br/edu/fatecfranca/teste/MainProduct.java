@@ -1,11 +1,11 @@
-package br.edu.fatecfranca;
+package br.edu.fatecfranca.teste;
 
-import br.edu.fatecfranca.Product;
-import br.edu.fatecfranca.ShoppingCart;
+import br.edu.fatecfranca.exe00.Product;
+import br.edu.fatecfranca.exe00.ShoppingCart;
 
 import java.util.Date;
 
-public class Main {
+public class MainProduct {
     public static void main(String[] args) {
         Product prod1 = new Product(1, "Bola de Basquete", 400);
         Product prod2 = new Product(2, "Bola de Futebol", 300);

@@ -1,4 +1,5 @@
-package br.edu.fatecfranca;
+package br.edu.fatecfranca.exe00;
+
 // é objeto todo para Product
 public class CarItem {
     private int id;
