@@ -1,23 +1,22 @@
 package br.edu.fatecfranca.exe02;
 
 public class Professor {
+    //Instanciando objeto
     private int id;
     private String name, username;
 
+    //Construtor sem parâmetro
     public Professor() {
-        this.id = 0;
-        this.name = "";
-        this.username = "";
     }
 
+    //Criando construtor com parâmetro
     public Professor(int id, String name, String username) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
+        setId(id);
+        setName(name);
+        setUsername(username);
     }
 
     //Criando os getters
-
     public int getId() {
         return id;
     }
@@ -30,8 +29,7 @@ public class Professor {
         return username;
     }
 
-    //Criando os setters
-
+    //Setters
     public void setId(int id) {
         this.id = id;
     }
@@ -44,6 +42,8 @@ public class Professor {
         this.username = username;
     }
 
+    //ToString
+
     @Override
     public String toString() {
         return "\nProfessor{" +
@@ -53,6 +53,7 @@ public class Professor {
                 '}';
     }
 
+    //Métodos
     public void dadosProfessor() {
         System.out.println(this.toString());
     }

@@ -5,59 +5,68 @@ import java.util.List;
 
 public class Forum {
     private int id;
-    private String name;
-    private String url;
+    private String name, url;
     private List<Message> messages = new ArrayList<>();
 
-    // Construtor
+    //Criando o construtor vazio
+    public Forum() {
+    }
+
+    //Construtor sem array
     public Forum(int id, String name, String url) {
         this.id = id;
         this.name = name;
         this.url = url;
     }
 
-    // Métodos getters e setters
+    //Getters
+
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getUrl() {
         return url;
+    }
+
+    public List<Message> getMessages() {
+        return messages;
+    }
+
+    //Setters
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setUrl(String url) {
         this.url = url;
     }
 
-    // Getter para messages
-    public List<Message> getMessages() {
-        return messages;
-    }
-
-    // Método para adicionar uma mensagem
-    public void addMessage(int msgId, String msgText, Person msgPerson) {
+    public void addMessages(int msgId, String msgText, Person msgPerson){
         this.messages.add(new Message(msgId, msgText, msgPerson));
     }
 
     @Override
     public String toString() {
-        return "Forum{" +
+        return "\nForum{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", url='" + url + '\'' +
                 ", messages=" + messages +
                 '}';
     }
+
+    public void dadosForum() {
+        System.out.println(this.toString());
+    }
 }
+

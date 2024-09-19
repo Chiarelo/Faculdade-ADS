@@ -2,50 +2,60 @@ package br.edu.fatecfranca.exe03;
 
 public class Passenger {
     private int id;
-    private String name;
-    private String cpf;
+    private String name, cpf;
 
-    public Passenger(int id, String name, String cpf) {
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
+    //Criando construtor vazio
+    public Passenger() {
     }
 
-    // Getters and Setters
+    //Criando construtor com parâmetros
+    public Passenger(int id, String name, String cpf) {
+        setId(id);
+        setName(name);
+        setCpf(cpf);
+    }
 
+    //Getters
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCpf() {
         return cpf;
     }
 
+    //Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setCpf(String cpf) {
+        if(cpf.length() != 14){
+            System.out.println("Erro: CPF invalido");
+        }
         this.cpf = cpf;
     }
 
+    //ToString
     @Override
     public String toString() {
-        return "Passenger{" +
+        return "\nPassenger{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", cpf='" + cpf + '\'' +
                 '}';
     }
-    public void dados(){
+
+    //métodos
+    public void dadosPassenger(){
         System.out.println(this.toString());
     }
 }

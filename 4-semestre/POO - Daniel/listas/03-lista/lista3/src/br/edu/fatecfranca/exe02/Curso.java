@@ -1,24 +1,27 @@
 package br.edu.fatecfranca.exe02;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Curso {
+    //Instanciando objeto
     private int id;
     private String name, area;
-    private List<Disciplina> disciplina = new ArrayList<Disciplina>();
+    List<Disciplina> disciplinas = new ArrayList<>();
 
+    //Criando construtor sem parâmetro
     public Curso() {
-
     }
 
+    //Construtor sem array
     public Curso(int id, String name, String area) {
         this.id = id;
         this.name = name;
         this.area = area;
     }
 
-    //Criando getters
+    //Getters
     public int getId() {
         return id;
     }
@@ -31,12 +34,11 @@ public class Curso {
         return area;
     }
 
-    public List<Disciplina> getDisciplina() {
-        return disciplina;
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
     }
 
-    //Criando seters, menos o de disciplina
-
+    //Setters
     public void setId(int id) {
         this.id = id;
     }
@@ -49,6 +51,11 @@ public class Curso {
         this.area = area;
     }
 
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    //ToString
 
     @Override
     public String toString() {
@@ -56,27 +63,32 @@ public class Curso {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", area='" + area + '\'' +
-                ", disciplina=" + disciplina +
+                ", disciplinas=" + disciplinas +
                 '}';
     }
 
+    //Métodos
     public void dadosCurso(){
         System.out.println(this.toString());
     }
-    public void addDisciplina(int id, String name, String sigla, Professor professor) {
-            this.disciplina.add(new Disciplina(id, name, sigla, professor));
 
+    //adicionando valores ao array
+    public void addDisciplina(int id, String name, String sigla, Professor professor){
+        this.disciplinas.add(new Disciplina(id, name, sigla, professor));
     }
 
-    public void addAlunoDisciplina(int idDisciplina, Aluno aluno) {
+    //Método que encontra a disciplina
+    public void addAlunoDisciplina(int idDisciplina, Aluno aluno){
         boolean achou = false;
-        for (Disciplina disciplina : disciplina) {
-            if (disciplina.getId() == idDisciplina) {
-                disciplina.addAluno(aluno);
+        for(Disciplina disciplina : disciplinas){
+            if(disciplina.getId() == idDisciplina){
+                disciplina.addAlunos(aluno);
                 achou = true;
-                return;
+                return ;
             }
         }
-        System.out.println("Disciplina INÁLIDA!!!");
+        System.out.println("Disciplina não existe");
     }
+    }
+
 }

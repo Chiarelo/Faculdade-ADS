@@ -1,5 +1,8 @@
 package br.edu.fatecfranca.exe03;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Reservation {
     private int id;
@@ -7,14 +10,20 @@ public class Reservation {
     private Passenger passenger;
     private Flight flight;
 
-    public Reservation(int id, Date date, Passenger passenger, Flight flight) {
-        this.id = id;
-        this.date = date;
-        this.passenger = passenger;
-        this.flight = flight;
+    //Construtor sem parametros
+    public Reservation() {
     }
 
-    // Getters and Setters
+
+    //Construtor
+    public Reservation(int id, Date date, Passenger passenger, Flight flight) {
+        setId(id);
+        setDate(date);
+        setPassenger(passenger);
+        setFlight(flight);
+    }
+
+    //Getters
     public int getId() {
         return id;
     }
@@ -31,6 +40,7 @@ public class Reservation {
         return flight;
     }
 
+    //Setter
     public void setId(int id) {
         this.id = id;
     }
@@ -47,6 +57,8 @@ public class Reservation {
         this.flight = flight;
     }
 
+    //ToString
+
     @Override
     public String toString() {
         return "Reservation{" +
@@ -56,7 +68,10 @@ public class Reservation {
                 ", flight=" + flight +
                 '}';
     }
-    public void dados(){
+
+    public void dadosReservation(){
         System.out.println(this.toString());
     }
+
+
 }

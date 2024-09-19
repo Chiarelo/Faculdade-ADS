@@ -1,64 +1,61 @@
 package br.edu.fatecfranca.exe03;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Flight {
     private int id;
-    private String origin;
-    private String destination;
-    private List<Reservation> reservations = new ArrayList<Reservation>();
+    private String origim, destination;
 
-    public Flight(int id, String origin, String destination) {
+    //Construtor sem paramentros
+    public Flight() {
+    }
+
+    //Construtor com parâmetros
+    public Flight(int id, String origim, String destination) {
         this.id = id;
-        this.origin = origin;
+        this.origim = origim;
         this.destination = destination;
     }
 
-    // Getters and Setters
-
+    //Getters
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
+    public String getOrigim() {
+        return origim;
     }
 
     public String getDestination() {
         return destination;
     }
 
+    //Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setOrigim(String origim) {
+        this.origim = origim;
+    }
+
     public void setDestination(String destination) {
         this.destination = destination;
     }
 
-    public List<Reservation> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(Reservation reservations) {
-        this.reservations.add(reservations);
-    }
+    //ToString
 
     @Override
     public String toString() {
-        return "Flight{" +
+        return "\nFlight{" +
                 "id=" + id +
-                ", origin='" + origin + '\'' +
+                ", origim='" + origim + '\'' +
                 ", destination='" + destination + '\'' +
-                ", reservations=" + reservations +
                 '}';
     }
 
-    public void dados(){
+    public void dadosFlight(){
         System.out.println(this.toString());
+    }
+
+    public void addReservation(Reservation r1) {
     }
 }

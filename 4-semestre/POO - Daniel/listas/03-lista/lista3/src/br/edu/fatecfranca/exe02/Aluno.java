@@ -1,22 +1,22 @@
 package br.edu.fatecfranca.exe02;
 
 public class Aluno {
+    //instanciando váriaveis
     private int id;
     private String name, username;
 
-    //Criando váriaveis
-    public Aluno(int id, String name, String username) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
-    }
-
+    //Construtor sem parametros
     public Aluno() {
-        this.id = 0;
-        this.name = "";
-        this.username = "";
     }
 
+    //Construtor com parâmetros
+    public Aluno(int id, String name, String username) {
+        setId(id);
+        setName(name);
+        setUsername(username);
+    }
+
+    //Getters
     public int getId() {
         return id;
     }
@@ -29,6 +29,8 @@ public class Aluno {
         return username;
     }
 
+
+    //Setters
     public void setId(int id) {
         this.id = id;
     }
@@ -41,6 +43,7 @@ public class Aluno {
         this.username = username;
     }
 
+    //ToString
     @Override
     public String toString() {
         return "\nAluno{" +
@@ -50,6 +53,7 @@ public class Aluno {
                 '}';
     }
 
+    //Método pra mostrar o to string de forma mais agíl
     public void dadosAluno(){
         System.out.println(this.toString());
     }
